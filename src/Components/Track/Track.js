@@ -3,11 +3,11 @@ import './Track.css';
 
 export function Track(props) {
   const addTrack = () => {
-    props.onAdd(this.props.track);
+    props.onAdd(props.track);
   }
 
   const removeTrack = () => {
-    props.onRemove(this.props.track);
+    props.onRemove(props.track);
   }
   
   const renderAction = () => {
@@ -24,7 +24,7 @@ export function Track(props) {
         <h3>{props.track.name}</h3>
         <p>{props.track.artist} | {props.track.album}</p>
       </div>
-      {renderAction}
+      {renderAction()}
     </div>
   )
 }
