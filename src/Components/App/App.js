@@ -15,8 +15,7 @@ function App() {
     if (tracks.find(savedTrack => savedTrack.id === track.id)) {
       return;
     }
-    tracks.push(track);
-    setPlaylistTracks(tracks);
+    setPlaylistTracks((tracks) => [...tracks, track]);
   }
 
   const removeTrack = (track) => {
